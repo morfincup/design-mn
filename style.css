@@ -1,7 +1,7 @@
 /* Asosiy uslublar */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f4f4f4;
   color: #111;
 }
@@ -44,14 +44,13 @@ header p {
 .navbar .nav-links li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .navbar .nav-links li a:hover {
   text-decoration: underline;
 }
 
-/* Mobil menyu tugmasi */
 .menu-toggle {
   display: none;
   font-size: 1.5em;
