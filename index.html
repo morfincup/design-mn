@@ -1,67 +1,127 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design MN | Grafik dizayn va montaj xizmatlari</title>
-  <meta name="description" content="Design MN — grafik dizayn, video montaj, banner, logo va kontent yaratish xizmatlari. O'zbekistondagi kreativ dizayn agentligingiz." />
-  <meta name="keywords" content="grafik dizayn, video montaj, logo dizayni, banner dizayni, Design MN, morfuncup, s4_mn" />
+  <title>Design MN – Grafik dizayn va video montaj</title>
+  <meta name="description" content="Design MN – Grafik dizayn, video montaj, ijtimoiy tarmoqlar uchun kontent tayyorlash. Telegram: @s4_mn, Instagram: @morfincup" />
+  <meta name="keywords" content="Design MN, grafik dizayn, video montaj, dizayner xizmatlari, kontent yaratish, Instagram dizayn" />
   <meta name="author" content="Design MN" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Design MN – Grafik dizayn va video montaj" />
+  <meta property="og:description" content="Grafik dizayn, montaj, Instagram kontent xizmati. Telegram: @s4_mn | Instagram: @morfincup" />
+  <meta property="og:image" content="https://morfincup.github.io/design-mn/preview.jpg" />
+  <meta property="og:url" content="https://morfincup.github.io/design-mn/" />
+  <meta property="og:type" content="website" />
 
-  <!-- Font Awesome (Telegram & Instagram icon) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-
-  <!-- Open Graph for better link previews -->
-  <meta property="og:title" content="Design MN | Grafik dizayn va montaj xizmatlari" />
-  <meta property="og:description" content="Design MN — grafik dizayn, video montaj, banner, logo va kontent yaratish xizmatlari." />
-  <meta property="og:image" content="https://yourdomain.uz/images/design-mn-preview.jpg" />
-  <meta property="og:url" content="https://yourdomain.uz" />
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Design MN – Grafik dizayn xizmati" />
+  <meta name="twitter:description" content="Professional grafik dizayn va video montaj xizmati. Instagram: @morfincup, Telegram: @s4_mn" />
+  <meta name="twitter:image" content="https://morfincup.github.io/design-mn/preview.jpg" />
 
-  <!-- Google Analytics (example only) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RGHBD3R756"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-RGHBD3R756');
   </script>
-
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav class="navbar">
-    <div class="logo">Design MN</div>
-    <div class="menu-toggle" id="mobile-menu">☰</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#">Bosh sahifa</a></li>
-      <li><a href="https://t.me/s4_mn" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
-      <li><a href="https://instagram.com/morfincup" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-    </ul>
-  </nav>
 
+<body>
   <header>
-    <h1>Design MN</h1>
-    <p>Grafik dizayn va video montaj xizmatlari</p>
+    <nav class="navbar">
+      <h1 class="logo">Design MN</h1>
+      <ul class="nav-links">
+        <li><a href="#services">Xizmatlar</a></li>
+        <li><a href="https://t.me/s4_mn" target="_blank">Telegram</a></li>
+        <li><a href="https://instagram.com/morfincup" target="_blank">Instagram</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="xizmatlar" class="fade-in">
-    <h2>Xizmatlar</h2>
-    <ul>
-      <li>✓ Logo va banner dizayni</li>
-      <li>✓ Instagram va Telegram post dizayni</li>
-      <li>✓ Video montaj va animatsiyalar</li>
-      <li>✓ Raqamli kontent uchun grafik paketlar</li>
-    </ul>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Grafik dizayn va professional montaj xizmatlari</h2>
+        <p>Sifatli kontent – muvaffaqiyatli brend uchun asos</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Xizmatlar</h2>
+      <div class="service-item">
+        <h3>Grafik dizayn</h3>
+        <p>Logo, banner, afisha, Instagram postlar va boshqa dizayn turlari</p>
+      </div>
+      <div class="service-item">
+        <h3>Video montaj</h3>
+        <p>Reels, YouTube, TikTok videolar, professional kliplar</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Design MN. Barcha huquqlar himoyalangan.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #007bff;
+      color: white;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #0066cc, #003366);
+      color: white;
+    }
+    .services {
+      padding: 2rem;
+      text-align: center;
+    }
+    .service-item {
+      margin: 1rem auto;
+      max-width: 600px;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
 </body>
+
 </html>
