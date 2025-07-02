@@ -1,3 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Xush kelibsiz !");
+  const menuToggle = document.getElementById("mobile-menu");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
 });
