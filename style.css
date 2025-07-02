@@ -72,3 +72,32 @@ section#xizmatlar ul li {
   font-weight: 500;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+#xizmatlar {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#xizmatlar h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#xizmatlar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#xizmatlar li {
+  background-color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #333;
+}
