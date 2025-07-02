@@ -1,21 +1,66 @@
-/* Asosiy uslublar */
+/* Asosiy */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
+  background: #f0f4fb;
   color: #111;
+}
+
+/* Navbar */
+.navbar {
+  background: #0066cc;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
 }
 
 /* Header */
 header {
-  background-color: #111;
+  background: linear-gradient(to right, #007bff, #00bfff);
   color: white;
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 60px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin: 0;
 }
 
@@ -24,50 +69,20 @@ header p {
   margin-top: 10px;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #222;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar .nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.navbar .nav-links li a:hover {
-  text-decoration: underline;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5em;
-  color: white;
-  cursor: pointer;
-}
-
-/* Xizmatlar bo‘limi */
+/* Xizmatlar */
 #xizmatlar {
-  background-color: #fff;
-  padding: 40px 20px;
+  padding: 50px 20px;
+  background: #ffffff;
   text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 30px 20px;
+  border-radius: 12px;
 }
 
 #xizmatlar h2 {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 20px;
+  color: #0066cc;
 }
 
 #xizmatlar ul {
@@ -80,31 +95,46 @@ header p {
 #xizmatlar li {
   font-size: 1.1em;
   padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
 /* Footer */
 footer {
-  background-color: #111;
+  background: #0066cc;
   color: white;
   text-align: center;
-  padding: 15px 20px;
+  padding: 20px;
   font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* Fade-in animatsiya */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsiv dizayn */
 @media (max-width: 768px) {
-  .navbar .nav-links {
+  .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #222;
-    position: absolute;
-    top: 55px;
-    left: 0;
+    background: #0066cc;
     width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
     text-align: center;
+    padding: 20px 0;
   }
 
-  .navbar .nav-links.show {
+  .nav-links.show {
     display: flex;
   }
 
