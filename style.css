@@ -1,0 +1,49 @@
+/* Asosiy uslublar */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f2f7ff;
+  color: #1a1a1a;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #003f88;
+}
+
+footer {
+  background-color: #003f88;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
