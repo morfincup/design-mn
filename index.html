@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Design MN – Grafik dizayn va video montaj</title>
-
-  <!-- SEO -->
   <meta name="description" content="Design MN – Grafik dizayn, video montaj, ijtimoiy tarmoqlar uchun kontent tayyorlash. Telegram: @s4_mn, Instagram: @morfincup" />
   <meta name="keywords" content="Design MN, grafik dizayn, video montaj, dizayner xizmatlari, kontent yaratish, Instagram dizayn" />
   <meta name="author" content="Design MN" />
@@ -22,16 +20,15 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Design MN – Grafik dizayn xizmati" />
   <meta name="twitter:description" content="Professional grafik dizayn va video montaj xizmati. Instagram: @morfincup, Telegram: @s4_mn" />
-  <meta name="robots" content="index, follow" />
-  <meta http-equiv="Content-Language" content="uz" />
-  <meta name="theme-color" content="#007bff" />
-  <link rel="canonical" href="https://morfincup.github.io/design-mn/" />
+  <meta name="twitter:image" content="https://morfincup.github.io/design-mn/preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RGHBD3R756"></script>
@@ -41,77 +38,43 @@
     gtag('js', new Date());
     gtag('config', 'G-RGHBD3R756');
   </script>
-</head>
-
-  </script>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Design MN</h1>
-      <ul class="nav-links">
-        <li><a href="#services">Xizmatlar</a></li>
-        <li><a href="https://t.me/s4_mn" target="_blank">
-          <i class="fab fa-telegram"></i> Telegram
-        </a></li>
-        <li><a href="https://instagram.com/morfincup" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
-        </a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Grafik dizayn va professional montaj xizmatlari</h2>
-        <p>Sifatli kontent – muvaffaqiyatli brend uchun asos</p>
-      </div>
-    </section>
-
-    <section id="services" class="services">
-      <h2>Xizmatlar</h2>
-      <div class="service-item">
-        <h3>Grafik dizayn</h3>
-        <p>Logo, banner, afisha, Instagram postlar va boshqa dizayn turlari</p>
-      </div>
-      <div class="service-item">
-        <h3>Video montaj</h3>
-        <p>Reels, YouTube, TikTok videolar, professional kliplar</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Design MN. Barcha huquqlar himoyalangan.</p>
-  </footer>
 
   <style>
+    :root {
+      --main-bg: #f9f9f9;
+      --text-color: #000;
+    }
+    [data-theme="dark"] {
+      --main-bg: #121212;
+      --text-color: #ffffff;
+    }
     body {
       margin: 0;
       font-family: sans-serif;
-      background-color: #f9f9f9;
+      background-color: var(--main-bg);
+      color: var(--text-color);
+      scroll-behavior: smooth;
     }
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background: linear-gradient(to right, #00aaff, #0066ff);
+      background-color: #007bff;
       color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
     }
     .nav-links {
       display: flex;
       gap: 1rem;
       list-style: none;
+      flex-wrap: wrap;
     }
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      display: flex;
-      align-items: center;
     }
     .nav-links i {
       margin-right: 5px;
@@ -121,6 +84,23 @@
       text-align: center;
       background: linear-gradient(to right, #0066cc, #003366);
       color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.05);
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(15px); }
+      100% { transform: translateY(0px); }
     }
     .services {
       padding: 2rem;
@@ -131,8 +111,39 @@
       max-width: 600px;
       background-color: white;
       padding: 1.5rem;
-      border-radius: 10px;
+      border-radius: 16px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+    .contact-form {
+      padding: 2rem;
+      text-align: center;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
     }
     footer {
       text-align: center;
@@ -141,7 +152,98 @@
       color: white;
       font-size: 0.9rem;
     }
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
+    .scroll-top.show {
+      display: block;
+    }
+    @media screen and (max-width: 600px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+      .service-item {
+        padding: 1rem;
+      }
+    }
   </style>
+</head>
+
+<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Design MN</h1>
+      <ul class="nav-links">
+        <li><a href="#services">Xizmatlar</a></li>
+        <li><a href="https://t.me/s4_mn" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+        <li><a href="https://instagram.com/morfincup" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><button onclick="toggleDarkMode()">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" data-aos="fade-up">
+      <div class="hero-text">
+        <h2>Grafik dizayn va professional montaj xizmatlari</h2>
+        <p>Sifatli kontent – muvaffaqiyatli brend uchun asos</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Xizmatlar</h2>
+      <div class="service-item" data-aos="fade-right">
+        <h3>Grafik dizayn</h3>
+        <p>Logo, banner, afisha, Instagram postlar va boshqa dizayn turlari</p>
+      </div>
+      <div class="service-item" data-aos="fade-left">
+        <h3>Video montaj</h3>
+        <p>Reels, YouTube, TikTok videolar, professional kliplar</p>
+      </div>
+    </section>
+
+    <section class="contact-form" data-aos="fade-up">
+      <h2>Biz bilan bogʻlanish</h2>
+      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Ismingiz" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Xabaringiz" rows="5" required></textarea>
+        <button type="submit">Yuborish</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Design MN. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    ⬆️
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('show', window.scrollY > 200);
+    });
+
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+    }
+  </script>
 </body>
 
 </html>
