@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://morfincup.github.io/design-mn/sitemap.xml
